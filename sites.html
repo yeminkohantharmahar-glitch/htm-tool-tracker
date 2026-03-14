@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Sites</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">ToolTracker</div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="tools.html">Tools List</a></li>
+            <li><a href="sites.html" class="active">Manage Sites</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <div class="form-card" style="max-width: 500px;">
+            <h2>Manage Sites</h2>
+            <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                <input type="text" id="new-site-name" placeholder="Enter site name">
+                <button onclick="addNewSite()" class="btn-primary" style="width: auto;">Add</button>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead><tr><th>Site Name</th><th>Action</th></tr></thead>
+                    <tbody id="sites-list-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

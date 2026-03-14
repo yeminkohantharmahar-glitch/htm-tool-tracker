@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">ToolTracker</div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="tools.html">Tools List</a></li>
+            <li><a href="add-tool.html" class="active">Add Tool</a></li>
+            <li><a href="sites.html">Manage Sites</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <div class="form-card">
+            <h2>Add New Tool</h2>
+            <form id="add-tool-form">
+                <input type="text" id="toolId" placeholder="Tool ID" required>
+                <input type="text" id="toolName" placeholder="Tool Name" required>
+                <label>Current Location:</label>
+                <select id="location"></select>
+                <label>Condition:</label>
+                <select id="condition">
+                    <option value="Good">Good</option>
+                    <option value="Fair">Fair</option>
+                    <option value="Repair">Needs Repair</option>
+                </select>
+                <button type="submit" class="btn-primary">Save to Sheet</button>
+            </form>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

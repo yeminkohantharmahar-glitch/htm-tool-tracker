@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Overview | HAN THAR MAHAR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-section">
+            <span class="navbar-logo">ToolTracker</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="tools.html">Tools List</a></li>
+            <li><a href="add-tool.html">Add Tool</a></li>
+            <li class="admin-only"><a href="sites.html">Manage Sites</a></li>
+            <li style="margin-left: 20px;"><a href="#" onclick="logout()" style="color: var(--gold);">Logout</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <div>
+                <h1>Tools Overview</h1>
+                <p style="color: #6c757d; margin: 0; font-size: 12px; font-weight: 500;">Real-time Inventory Status</p>
+            </div>
+            
+            <div class="admin-only" style="display: flex; gap: 10px; background: white; padding: 10px; border-radius: 12px; box-shadow: var(--shadow);">
+                <input type="text" id="new-site-name" placeholder="New site name..." style="margin: 0; width: 170px; height: 38px;">
+                <button onclick="addNewSite()" class="btn-primary" style="height: 38px;">+ Add Site</button>
+            </div>
+        </div>
+
+        <div id="stats-container" class="stats-grid">
+            <p style="color: #6c757d;">Loading inventory stats...</p>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

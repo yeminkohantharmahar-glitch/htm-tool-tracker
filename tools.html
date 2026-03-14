@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">ToolTracker</div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="tools.html" class="active">Tools List</a></li>
+            <li><a href="add-tool.html">Add Tool</a></li>
+            <li><a href="sites.html">Manage Sites</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>ID</th><th>Name & History</th><th>Location</th><th>Condition</th><th>Action</th></tr>
+                </thead>
+                <tbody id="tools-body"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <div id="moveModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modal-tool-name"></h3>
+            <label>Move to Site:</label>
+            <select id="modal-location"></select>
+            <input type="text" id="sender-name" placeholder="Sender (ပို့သူ)">
+            <input type="text" id="receiver-name" placeholder="Receiver (လက်ခံသူ)">
+            <div class="modal-btns">
+                <button onclick="confirmMove()" class="btn-primary">Confirm</button>
+                <button onclick="closeModal()" class="btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
